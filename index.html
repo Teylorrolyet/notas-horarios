@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PORTAL BOSQUE</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>PORTAL BOSQUE</h1>
+    <div id="clock"></div>
+  </header>
+
+  <!-- Aviso inicial -->
+  <div id="aviso" class="aviso">
+    ⚠️ Los datos se guardan únicamente en este dispositivo. 
+    Si accede desde otro móvil, no estarán disponibles.
+  </div>
+
+  <!-- Pantalla de Login -->
+  <section id="login-section">
+    <h2>Acceso</h2>
+    <form id="login-form">
+      <input type="text" id="usuario" placeholder="Usuario" required>
+      <input type="password" id="password" placeholder="Contraseña (4 dígitos)" pattern="[0-9]{4}" required>
+      <button type="submit">Ingresar</button>
+    </form>
+  </section>
+
+  <!-- Pantalla principal -->
+  <section id="main-section" class="hidden">
+    <h2>Registro de Horarios</h2>
+    <form id="registro-form">
+      <label>Fecha:</label>
+      <input type="date" id="fecha" required>
+      <label>Entrada:</label>
+      <input type="time" id="entrada" value="07:00" required>
+      <label>Salida:</label>
+      <input type="time" id="salida" value="14:00" required>
+      <button type="submit">Guardar jornada</button>
+    </form>
+
+    <h2>Jornadas Registradas</h2>
+    <ul id="lista-jornadas"></ul>
+
+    <h2>Resumen Mensual</h2>
+    <select id="mes-selector"></select>
+    <div id="resumen"></div>
+
+    <button id="compartir">Compartir por WhatsApp</button>
+    <button id="modo-oscuro">Modo Oscuro</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
